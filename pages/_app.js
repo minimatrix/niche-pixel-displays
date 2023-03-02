@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         <NavigationMenu />
         <Component {...pageProps} />
         <div className="pb-4">
-          Footer
+
         </div>
       </div>
     </>

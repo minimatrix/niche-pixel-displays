@@ -1,9 +1,15 @@
-const BASE_URL = "https://my-wordpress.sportslink.info/wp-json/wp/v2";
+const BASE_URL = "http://niche-pixel-backend.test/wp-json/wp/v2";
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + "/posts?_embed");
   const posts = await postsRes.json();
   return posts;
+}
+
+export async function getAbout() {
+  const aboutRes = await fetch(BASE_URL + "/pages?slug=about-us");
+  const about = await aboutRes.json();
+  return about;
 }
 
 export async function getPost(slug) {

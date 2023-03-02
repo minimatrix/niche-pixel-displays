@@ -30,7 +30,6 @@ export default function Home({ posts, events }) {
         {/* You can add more metadata here, like open graph tags for social media, etc */}
       </Head>
 
-      {/* <div className="container bg-black text-white"> */}
 
       {/* hero section */}
       <div className="row mb-5 px-4">
@@ -67,7 +66,9 @@ export default function Home({ posts, events }) {
       {/* our services */}
 
       <div className="row mb-5 px-4" style={{ background: "#121212" }}>
-        <div className="col-md-12 p-5 text-center">
+        <div className="col-md-2"></div>
+
+        <div className="col-md-8 p-5 text-center">
           <h5 style={{ textTransform: "uppercase", fontSize: "2em", fontWeight: "bold" }}>Our <span style={{ color: "#4FE8FD" }}>Services</span></h5>
           <div className="mt-3 mb-2" >Here’s how we can help you deliver an incredible immersive event</div>
           <p>
@@ -85,12 +86,13 @@ export default function Home({ posts, events }) {
             <div style={{ backgroundSize: "cover", backgroundImage: "url('https://www.gannett-cdn.com/presto/2020/12/16/NAUG/3f4eac00-9993-4572-8f24-61e0830fef20-GAAUG-121720-ChristmasLightShow3_SS.jpg?height=576')", marginTop: 20, width: "150px", border: "solid 1px #39FD70", borderRadius: "25px", height: "150px" }}></div>
           </div>
         </div>
+        <div className="col-md-2"></div>
       </div>
 
       {/* our processes */}
       <div className="row mb-5 px-4">
         <div className="col-md-2"></div>
-        <div className="col-md-12 p-5 text-center">
+        <div className="col-md-8 p-5 text-center">
 
           <h5 style={{ textTransform: "uppercase", fontSize: "2em", fontWeight: "bold" }}>Our <span style={{ color: "#F134E9" }}>Process</span></h5>
           <div className="mt-3 mb-2" >How does the process work?</div>

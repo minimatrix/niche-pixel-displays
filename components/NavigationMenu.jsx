@@ -1,8 +1,15 @@
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+
+
 
 const NavigationMenu = () => {
+
+
+    const router = useRouter();
+    const currentRoute = router.pathname;
 
     return (
 
@@ -15,11 +22,11 @@ const NavigationMenu = () => {
                 <div className="collapse navbar-collapse  justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link href='/'><a className="nav-link active" aria-current="page" href="#">Home</a></Link>
+                            <Link href='/'><a className={`nav-link  ${currentRoute === '/' && 'active'}`} aria-current="page" href="#">Home</a></Link>
                         </li>
                         <li className="nav-item">
                             <Link href='/about'>
-                                <a className="nav-link">About us</a>
+                                <a className={`nav-link  ${currentRoute === '/about' && 'active'}`}>About us</a>
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -40,7 +47,7 @@ const NavigationMenu = () => {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 }
 
