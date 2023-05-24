@@ -54,9 +54,11 @@ export default function Home({ posts, events }) {
             BESPOKE LIGHTING DISPLAYS TAILORED TO YOUR REQUIREMENTS
           </p>
 
-          <div className="btn btn-lg btn-primary" style={{ backgroundColor: "#0BC7D3", border: "white", borderRadius: 30 }}>
-            GET A QUOTE
-          </div>
+          <a href="/quote">
+            <div className="btn btn-lg btn-primary" style={{ backgroundColor: "#0BC7D3", border: "white", borderRadius: 30 }}>
+              GET A QUOTE
+            </div>
+          </a>
 
         </div>
 

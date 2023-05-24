@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import NavigationMenu from '../components/NavigationMenu'
+import Footer from '../components/Footer'
 
 import '../styles/globals.css'
 
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
 
         </div>
       </div>
+      <Footer />
     </>
   )
 
