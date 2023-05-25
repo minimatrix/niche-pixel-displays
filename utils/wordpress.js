@@ -12,6 +12,14 @@ export async function getAbout() {
   return about;
 }
 
+
+export async function getBasicMegaTree() {
+  const basicMegaTreeRes = await fetch(BASE_URL + "/pages?slug=basic-mega-tree");
+  const basicMegaTree = await basicMegaTreeRes.json();
+  return basicMegaTree;
+}
+
+
 export async function getPost(slug) {
   const posts = await getPosts();
   const postArray = posts.filter((post) => post.slug == slug);

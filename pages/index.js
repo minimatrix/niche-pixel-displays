@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { getEvents, getPosts } from '../utils/wordpress';
 import Post from "../components/Post";
 import Event from "../components/Event";
+import Link from 'next/link'
 
 export default function Home({ posts, events }) {
 
@@ -81,18 +82,38 @@ export default function Home({ posts, events }) {
             Our lighting displays are completely bespoke, tailored and programmed specifically for your needs, meanging that no-one else will have the same
 
           </p>
-          <div className="row d-flex justify-content-center gap-5  mt-5 mb-5">
-            <div style={{ backgroundSize: "cover", backgroundImage: "url('https://s.alicdn.com/@sc04/kf/H885ada37595342edab8a9852d94c6fb6A.jpg_960x960.jpg')", marginTop: 20, width: "150px", border: "solid 1px #F134E9", borderRadius: "25px", height: "150px" }}></div>
-            <div style={{ backgroundSize: "cover", backgroundImage: "url('https://www.sussexexpress.co.uk/webimg/b25lY21zOmEwYWM2MDM4LWJiNTUtNGRjNS04MTdmLWI4OTdhY2IwMWZmYzo5MDg5MjFjNi00NWNiLTQwNGItYjYyNy00MjNiODgwZjY1YmU=.jpg?crop=61:45,smart&width=800')", marginTop: 20, width: "150px", border: "solid 1px #4FE8FD", borderRadius: "25px", height: "150px" }}></div>
-            <div style={{ backgroundSize: "cover", backgroundImage: "url('http://p.ledinside.com/led/2012-11/1352773624_60275.png')", marginTop: 20, width: "150px", border: "solid 1px #FEEF62", borderRadius: "25px", height: "150px" }}></div>
-            <div style={{ backgroundSize: "cover", backgroundImage: "url('https://www.gannett-cdn.com/presto/2020/12/16/NAUG/3f4eac00-9993-4572-8f24-61e0830fef20-GAAUG-121720-ChristmasLightShow3_SS.jpg?height=576')", marginTop: 20, width: "150px", border: "solid 1px #39FD70", borderRadius: "25px", height: "150px" }}></div>
+          <div className="row d-flex justify-content-center  mt-5 mb-5">
+            <Link href='/basic-mega-tree'>
+              <div className="col-5 col-md-3 justify-content-center" style={{ cursor: "pointer" }}>
+                <div style={{ height: '150px', backgroundSize: "cover", backgroundRepeat: 'none', backgroundImage: "url('https://s.alicdn.com/@sc04/kf/H885ada37595342edab8a9852d94c6fb6A.jpg_960x960.jpg')", marginTop: 20, border: "solid 1px #F134E9", borderRadius: "25px" }}></div>
+                <div className="mt-4" style={{ textTransform: "uppercase", fontSize: "0.9em", fontWeight: "bold" }}>Basic <span style={{ color: "#F134E9" }}> Mega Trees</span></div>
+              </div>
+            </Link>
+            <Link href='/custom-mega-tree'>
+              <div className="col-5 col-md-3 justify-content-center" style={{ cursor: "pointer" }}>
+                <div style={{ height: '150px', backgroundSize: "cover", backgroundImage: "url('https://www.sussexexpress.co.uk/webimg/b25lY21zOmEwYWM2MDM4LWJiNTUtNGRjNS04MTdmLWI4OTdhY2IwMWZmYzo5MDg5MjFjNi00NWNiLTQwNGItYjYyNy00MjNiODgwZjY1YmU=.jpg?crop=61:45,smart&width=800')", marginTop: 20, border: "solid 1px #4FE8FD", borderRadius: "25px" }}></div>
+                <div className="mt-4" style={{ textTransform: "uppercase", fontSize: "0.9em", fontWeight: "bold" }}>Custom <span style={{ color: "#4FE8FD" }}> Mega Trees</span></div>
+              </div>
+            </Link>
+            <Link href='/led-tunnels'>
+              <div className="col-5 col-md-3 justify-content-center" style={{ cursor: "pointer" }} >
+                <div style={{ height: '150px', backgroundSize: "cover", backgroundImage: "url('http://p.ledinside.com/led/2012-11/1352773624_60275.png')", marginTop: 20, border: "solid 1px #FEEF62", borderRadius: "25px" }}></div>
+                <div className="mt-4" style={{ textTransform: "uppercase", fontSize: "0.9em", fontWeight: "bold" }}>LED <span style={{ color: "#FEEF62" }}>Tunnels</span></div>
+              </div>
+            </Link>
+            <Link href='/led-decorations'>
+              <div className="col-5 col-md-3 justify-content-center" style={{ cursor: "pointer" }} >
+                <div style={{ height: '150px', backgroundSize: "cover", backgroundImage: "url('https://www.gannett-cdn.com/presto/2020/12/16/NAUG/3f4eac00-9993-4572-8f24-61e0830fef20-GAAUG-121720-ChristmasLightShow3_SS.jpg?height=576')", marginTop: 20, border: "solid 1px #39FD70", borderRadius: "25px", }}></div>
+                <div className="mt-4" style={{ textTransform: "uppercase", fontSize: "0.9em", fontWeight: "bold" }}>LED <span style={{ color: "#39FD70" }}>Decorations</span></div>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="col-md-2"></div>
-      </div>
+      </div >
 
       {/* our processes */}
-      <div className="row mb-5 px-4">
+      < div className="row mb-5 px-4" >
         <div className="col-md-2"></div>
         <div className="col-md-8 p-5 text-center">
 
@@ -107,10 +128,11 @@ export default function Home({ posts, events }) {
           </p>
         </div>
         <div className="col-md-2"></div>
-      </div>
+      </div >
 
       {/* case studies  */}
-      <div className="row px-4 " style={{ background: "#121212" }}>
+      < div className="row px-4 " style={{ background: "#121212" }
+      }>
         <div className="col-md-2"></div>
         <div className="col-md-8 p-5 text-center">
           <h5 style={{ textTransform: "uppercase", fontSize: "2em", fontWeight: "bold", color: "#4FE8FD" }}>Case Studies</h5>
@@ -126,10 +148,10 @@ export default function Home({ posts, events }) {
         </div>
         <div className="col-md-2"></div>
 
-      </div>
+      </div >
 
       {/* testimonials */}
-      <div className="row px-4 " style={{ background: "#fff" }}>
+      < div className="row px-4 " style={{ background: "#fff" }}>
         <div className="col-md-2"></div>
         <div className="col-md-8 p-5 text-center">
           <h5 style={{ textTransform: "uppercase", fontSize: "2em", fontWeight: "bold", color: "#212121" }}>Testimonials</h5>
@@ -149,7 +171,7 @@ export default function Home({ posts, events }) {
         </div>
         <div className="col-md-2"></div>
 
-      </div>
+      </div >
 
 
       {/* <div className="row">
